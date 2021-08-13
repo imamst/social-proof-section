@@ -1,0 +1,110 @@
+section.testimonial {
+    margin: 4rem 2rem;
+}
+
+.testimonial__heading {
+    text-align: center;
+}
+
+h1.testimonial__title {
+    line-height: 1;
+}
+
+.testimonial__rating {
+    margin-top: 2rem;
+}
+
+.testimonial__rating-item {
+    padding: 1.2rem;
+    margin-bottom: 1.4rem;
+    background-color: $light-grayish-magenta;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+figure.star-rating {
+    margin: 0;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 3rem 2rem 2rem 2rem;
+    margin-bottom: 1.4rem;
+}
+
+.testimonial__item {
+    background-color: $very-dark-magenta;
+    color: $white;
+}
+
+.customer-info {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto;
+    grid-column-gap: 1.4rem;
+}
+
+.customer-info__img {
+    width: 50px;
+    border-radius: 50%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.customer-info__status {
+    color: $soft-pink;
+}
+
+@media screen and (min-width: 600px) {
+    section.testimonial {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 1rem 2rem;
+    }
+
+    .testimonial__heading {
+        grid-column-start: 1;
+        text-align: left;
+        padding-right: 25%;
+    }
+
+    .testimonial__rating {
+        grid-column-start: 2;
+        padding-right: 25%;
+    }
+
+    .testimonial__rating-item {
+        text-align: left;
+    }
+
+    .testimonial__rating-item:nth-child(2) {
+        transform: translateX(10%);
+    }
+
+    .testimonial__rating-item:last-child {
+        transform: translateX(20%);
+    }
+
+    figure.star-rating {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    .testimonial__content {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1rem;
+    }
+
+    .testimonial__item:nth-child(2) {
+        transform: translateY(5%);
+    }
+
+    .testimonial__item:last-child {
+        transform: translateY(10%);
+    }
+}
